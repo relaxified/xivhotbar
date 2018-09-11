@@ -1,0 +1,61 @@
+<hotbar>
+    <field>
+        <hotbar_3></hotbar_3>
+        <hotbar_2></hotbar_2>
+        <hotbar_1>
+            <slot_9>
+                <icon>dismount</icon>
+                <type>ct</type>
+                <alias>Dismount</alias>
+                <action>dismount</action>
+
+            </slot_9>
+            <slot_0>
+                <icon>mounts/mount-raptor</icon>
+                <type>ct</type>
+                <alias>Mount</alias>
+                <action>mount raptor</action>
+
+            </slot_0>
+
+        </hotbar_1>
+
+    </field>
+    <battle>
+        <hotbar_3></hotbar_3>
+        <hotbar_2></hotbar_2>
+        <hotbar_1>
+            <slot_4>
+                <target>bt</target>
+                <type>ma</type>
+                <action>fire v</action>
+                <alias>Fire5</alias>
+
+            </slot_4>
+            <slot_2>
+                <target>bt</target>
+                <type>ma</type>
+                <action>Fire</action>
+                <alias>Fire</alias>
+
+            </slot_2>
+            <slot_1>
+                <target>me</target>
+                <type>ja</type>
+                <action>Immanence</action>
+                <alias>SC</alias>
+
+            </slot_1>
+            <slot_3>
+                <target>bt</target>
+                <type>ma</type>
+                <action>thunder</action>
+                <alias>Thunder</alias>
+
+            </slot_3>
+
+        </hotbar_1>
+
+    </battle>
+
+</hotbar>

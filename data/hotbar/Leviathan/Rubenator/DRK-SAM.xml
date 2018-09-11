@@ -1,0 +1,177 @@
+<hotbar>
+    <field>
+        <hotbar_3></hotbar_3>
+        <hotbar_2></hotbar_2>
+        <hotbar_1>
+            <slot_9>
+                <type>ct</type>
+                <action>dismount</action>
+                <target>me</target>
+                <alias>Dismount</alias>
+                <icon>dismount</icon>
+
+            </slot_9>
+            <slot_0>
+                <type>ct</type>
+                <action>mount fenrir</action>
+                <target>me</target>
+                <alias>Fenrir</alias>
+                <icon>mounts/mount-fenrir</icon>
+
+            </slot_0>
+
+        </hotbar_1>
+
+    </field>
+    <battle>
+        <hotbar_3></hotbar_3>
+        <hotbar_2>
+            <slot_9>
+                <target>stnpc</target>
+                <type>ma</type>
+                <action>absorb-vit</action>
+                <alias>VIT</alias>
+
+            </slot_9>
+            <slot_7>
+                <target>stnpc</target>
+                <type>ma</type>
+                <action>absorb-acc</action>
+                <alias>ACC</alias>
+
+            </slot_7>
+            <slot_3>
+                <target>stnpc</target>
+                <type>ma</type>
+                <action>sleep ii</action>
+                <alias>Sleep II</alias>
+
+            </slot_3>
+            <slot_6>
+                <target>stnpc</target>
+                <type>ma</type>
+                <action>Drain iii</action>
+                <alias>Drain III</alias>
+
+            </slot_6>
+            <slot_2>
+                <target>me</target>
+                <type>ma</type>
+                <action>dread spikes</action>
+                <alias>Dread</alias>
+
+            </slot_2>
+            <slot_4>
+                <target>stnpc</target>
+                <type>ma</type>
+                <action>sleep</action>
+                <alias>Sleep</alias>
+
+            </slot_4>
+            <slot_5>
+                <target>stnpc</target>
+                <type>ma</type>
+                <action>drain ii</action>
+                <alias>Drain II</alias>
+
+            </slot_5>
+            <slot_8>
+                <target>stnpc</target>
+                <type>ma</type>
+                <action>absorb-STR</action>
+                <alias>STR</alias>
+
+            </slot_8>
+            <slot_0>
+                <target>t</target>
+                <type>ma</type>
+                <action>stun</action>
+                <alias>Stun</alias>
+
+            </slot_0>
+            <slot_1>
+                <target>me</target>
+                <type>ma</type>
+                <action>Endark II</action>
+                <alias>Endark</alias>
+
+            </slot_1>
+
+        </hotbar_2>
+        <hotbar_1>
+            <slot_2>
+                <target>me</target>
+                <type>ja</type>
+                <action>scarlet delirium</action>
+                <alias>SarletD</alias>
+
+            </slot_2>
+            <slot_7>
+                <target>me</target>
+                <type>ja</type>
+                <action>sekkanoki</action>
+                <alias>Sekka</alias>
+
+            </slot_7>
+            <slot_1>
+                <target>me</target>
+                <type>ja</type>
+                <action>Last Resort</action>
+                <alias>LastR</alias>
+
+            </slot_1>
+            <slot_6>
+                <target>me</target>
+                <type>ja</type>
+                <action>nether void</action>
+                <alias>NetherV</alias>
+
+            </slot_6>
+            <slot_9>
+                <target>me</target>
+                <type>ja</type>
+                <action>third eye</action>
+                <alias>3Eye</alias>
+
+            </slot_9>
+            <slot_4>
+                <target>me</target>
+                <type>ja</type>
+                <action>diabolic eye</action>
+                <alias>DiabolicE</alias>
+
+            </slot_4>
+            <slot_5>
+                <target>me</target>
+                <type>ja</type>
+                <action>meditate</action>
+                <alias>Meditate</alias>
+
+            </slot_5>
+            <slot_8>
+                <target>me</target>
+                <type>ja</type>
+                <action>consume mana</action>
+                <alias>CMana</alias>
+
+            </slot_8>
+            <slot_0>
+                <target>t</target>
+                <type>ja</type>
+                <action>weapon bash</action>
+                <alias>WBash</alias>
+
+            </slot_0>
+            <slot_3>
+                <target>me</target>
+                <type>ja</type>
+                <action>hasso</action>
+                <alias>Hasso</alias>
+
+            </slot_3>
+
+        </hotbar_1>
+
+    </battle>
+
+</hotbar>

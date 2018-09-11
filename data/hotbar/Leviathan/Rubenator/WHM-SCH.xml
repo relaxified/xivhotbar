@@ -1,0 +1,189 @@
+<hotbar>
+    <field>
+        <hotbar_3></hotbar_3>
+        <hotbar_2></hotbar_2>
+        <hotbar_1>
+            <slot_1>
+                <icon>attack</icon>
+                <type>ct</type>
+                <alias>Attack</alias>
+                <action>attack on</action>
+
+            </slot_1>
+            <slot_2>
+                <icon>check</icon>
+                <type>ct</type>
+                <alias>Check</alias>
+                <action>check</action>
+
+            </slot_2>
+            <slot_9>
+                <icon>return-trust</icon>
+                <type>ct</type>
+                <alias>No Trusts</alias>
+                <action>returntrust all</action>
+
+            </slot_9>
+            <slot_0>
+                <icon>heal</icon>
+                <type>ct</type>
+                <alias>Heal</alias>
+                <action>heal</action>
+
+            </slot_0>
+
+        </hotbar_1>
+
+    </field>
+    <battle>
+        <hotbar_3></hotbar_3>
+        <hotbar_2>
+            <slot_2>
+                <target>me</target>
+                <type>ma</type>
+                <action>esuna</action>
+                <alias>Esuna</alias>
+
+            </slot_2>
+            <slot_7>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>cursna</action>
+                <alias>Cursna</alias>
+
+            </slot_7>
+            <slot_1>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>erase</action>
+                <alias>Erase</alias>
+
+            </slot_1>
+            <slot_6>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>blindna</action>
+                <alias>Stona</alias>
+
+            </slot_6>
+            <slot_3>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>poisona</action>
+                <alias>Poisona</alias>
+
+            </slot_3>
+            <slot_4>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>paralyna</action>
+                <alias>Paralyna</alias>
+
+            </slot_4>
+            <slot_5>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>blindna</action>
+                <alias>Blindna</alias>
+
+            </slot_5>
+            <slot_8>
+                <target>me</target>
+                <type>ja</type>
+                <action>divine caress</action>
+                <alias>DivineC</alias>
+
+            </slot_8>
+            <slot_9>
+                <target>me</target>
+                <type>ja</type>
+                <action>sublimation</action>
+                <alias>Sublimation</alias>
+
+            </slot_9>
+            <slot_0>
+                <target>me</target>
+                <type>ja</type>
+                <action>Divine Seal</action>
+                <alias>DivineS</alias>
+
+            </slot_0>
+
+        </hotbar_2>
+        <hotbar_1>
+            <slot_2>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>cure iv</action>
+                <alias>C4</alias>
+
+            </slot_2>
+            <slot_7>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>Curaga</action>
+                <alias>Cg</alias>
+
+            </slot_7>
+            <slot_0>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>Curaga v</action>
+                <alias>Cg5</alias>
+
+            </slot_0>
+            <slot_6>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>cure</action>
+                <alias>C1</alias>
+
+            </slot_6>
+            <slot_9>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>Curaga iv</action>
+                <alias>Cg4</alias>
+
+            </slot_9>
+            <slot_4>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>cure vi</action>
+                <alias>C6</alias>
+
+            </slot_4>
+            <slot_5>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>silena</action>
+                <alias>Silena</alias>
+
+            </slot_5>
+            <slot_8>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>Curaga iii</action>
+                <alias>Cg3</alias>
+
+            </slot_8>
+            <slot_1>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>cure iii</action>
+                <alias>C3</alias>
+
+            </slot_1>
+            <slot_3>
+                <target>stpc</target>
+                <type>ma</type>
+                <action>cure v</action>
+                <alias>C5</alias>
+
+            </slot_3>
+
+        </hotbar_1>
+
+    </battle>
+
+</hotbar>

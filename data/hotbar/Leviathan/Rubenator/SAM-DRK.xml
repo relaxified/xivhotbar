@@ -1,0 +1,91 @@
+<hotbar>
+    <field>
+        <hotbar_3></hotbar_3>
+        <hotbar_2></hotbar_2>
+        <hotbar_1>
+            <slot_9>
+                <icon>dismount</icon>
+                <type>ct</type>
+                <alias>Dismount</alias>
+                <action>dismount</action>
+
+            </slot_9>
+            <slot_0>
+                <icon>mounts/mount-raptor</icon>
+                <type>ct</type>
+                <alias>Mount</alias>
+                <action>mount raptor</action>
+
+            </slot_0>
+
+        </hotbar_1>
+
+    </field>
+    <battle>
+        <hotbar_3></hotbar_3>
+        <hotbar_2>
+            <slot_0>
+                <target>t</target>
+                <type>ja</type>
+                <action>weapon bash</action>
+                <alias>stun</alias>
+
+            </slot_0>
+            <slot_3>
+                <target>t</target>
+                <type>ja</type>
+                <action>konzen-ittai</action>
+                <alias>prepSC</alias>
+
+            </slot_3>
+            <slot_2>
+                <target>me</target>
+                <type>ja</type>
+                <action>sengikori</action>
+                <alias>SCBonus</alias>
+
+            </slot_2>
+
+        </hotbar_2>
+        <hotbar_1>
+            <slot_4>
+                <target>me</target>
+                <type>ja</type>
+                <action>Last Resort</action>
+                <alias>LastR</alias>
+
+            </slot_4>
+            <slot_7>
+                <target>me</target>
+                <type>ja</type>
+                <action>Sekkanoki</action>
+                <alias>Sekkanoki</alias>
+
+            </slot_7>
+            <slot_0>
+                <target>t</target>
+                <type>ja</type>
+                <action>blade bash</action>
+                <alias>stun</alias>
+
+            </slot_0>
+            <slot_5>
+                <target>me</target>
+                <type>ja</type>
+                <action>meditate</action>
+                <alias>Meditate</alias>
+
+            </slot_5>
+            <slot_3>
+                <target>me</target>
+                <type>ja</type>
+                <action>hasso</action>
+                <alias>Hasso</alias>
+
+            </slot_3>
+
+        </hotbar_1>
+
+    </battle>
+
+</hotbar>
