@@ -69,7 +69,7 @@ defaults.Color.Disabled = {}
 defaults.Color.Disabled.Opacity = 100
 
 defaults.Texts = {}
-defaults.Texts.Font = 'sans-serif'
+--defaults.Texts.Font = 'sans-serif'
 defaults.Texts.Size = 7
 defaults.Texts.OffsetX = 0
 defaults.Texts.OffsetY = 0

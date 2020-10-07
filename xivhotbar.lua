@@ -68,8 +68,12 @@ local ignorekey = false
 -- initialize addon
 function initialize()
     local windower_player = windower.ffxi.get_player()
-    local server = resources.servers[windower.ffxi.get_info().server].en
-	
+    local server = "PrivateServer"
+    if resources.servers[windower.ffxi.get_info().server] ~= nil then
+        server = resources.servers[windower.ffxi.get_info().server].en
+    else
+
+	end
 	--print("Player "..windower_player.name)
 	--print("Server "..server)
 	
@@ -338,7 +342,7 @@ windower.register_event('addon command', function(command, ...)
 end)
 
 -- ON KEY
-windower.register_event('keyboard', function(dik, pressed, flags)
+windower.register_event('keyboard', function(dik, flags, blocked)
     if xivhotbar.ready == false or windower.ffxi.get_info().chat_open then
         return
     end
@@ -346,36 +350,83 @@ windower.register_event('keyboard', function(dik, pressed, flags)
     if xivhotbar.hide_hotbars then
         return
     end
-	
-	
-	shiftDown = bit.band(bit.rshift(flags, 0), 1) == 1;
-	altDown = bit.band(bit.rshift(flags, 1), 1) == 1;
-	controlDown = bit.band(bit.rshift(flags, 2), 1) == 1;
-	
-	if shiftDown and not altDown and not controlDown then
-		change_active_hotbar(2)
-	else
-		change_active_hotbar(1)
-	end
 
-    if dik == theme_options.controls_battle_mode and pressed == true then
+    -- activate third hotbar
+    if dik == keyboard.ctrl and flags == true and xivhotbar.pressing_combo_key_2 == false then
+        xivhotbar.pressing_combo_key_2 = true
+        change_active_hotbar(3)
+    end
+
+    if dik == keyboard.ctrl and flags == false and xivhotbar.pressing_combo_key_2 == true then
+        xivhotbar.pressing_combo_key_2 = false
+        change_active_hotbar(1)
+    end
+
+    -- activate second hotbar
+    if dik == keyboard.shift and flags == true and xivhotbar.pressing_combo_key_1 == false then
+        xivhotbar.pressing_combo_key_1 = true
+        change_active_hotbar(2)
+    end
+
+    if dik == keyboard.shift and flags == false and xivhotbar.pressing_combo_key_1 == true then
+        xivhotbar.pressing_combo_key_1 = false
+        change_active_hotbar(1)
+    end
+
+    if dik == theme_options.controls_battle_mode and flags == true then
         toggle_environment()
     end
-	
-	if pressed == true and not altDown and not controlDown then
-		if dik == keyboard.key_1 then trigger_action(1); return false; end
-		if dik == keyboard.key_2 then trigger_action(2); return false; end
-		if dik == keyboard.key_3 then trigger_action(3); return false; end
-		if dik == keyboard.key_4 then trigger_action(4); return false; end
-		if dik == keyboard.key_5 then trigger_action(5); return false; end
-		if dik == keyboard.key_6 then trigger_action(6); return false; end
-		if dik == keyboard.key_7 then trigger_action(7); return false; end
-		if dik == keyboard.key_8 then trigger_action(8); return false; end
-		if dik == keyboard.key_9 then trigger_action(9); return false; end
-		if dik == keyboard.key_0 then trigger_action(0); return false; end
-	end
-	--return false
+
+    if dik == keyboard.key_1 and flags == true then trigger_action(1) end
+    if dik == keyboard.key_2 and flags == true then trigger_action(2) end
+    if dik == keyboard.key_3 and flags == true then trigger_action(3) end
+    if dik == keyboard.key_4 and flags == true then trigger_action(4) end
+    if dik == keyboard.key_5 and flags == true then trigger_action(5) end
+    if dik == keyboard.key_6 and flags == true then trigger_action(6) end
+    if dik == keyboard.key_7 and flags == true then trigger_action(7) end
+    if dik == keyboard.key_8 and flags == true then trigger_action(8) end
+    if dik == keyboard.key_9 and flags == true then trigger_action(9) end
+    if dik == keyboard.key_0 and flags == true then trigger_action(0) end
 end)
+
+-- windower.register_event('keyboard', function(dik, pressed, flags)
+--     if xivhotbar.ready == false or windower.ffxi.get_info().chat_open then
+--         return
+--     end
+
+--     if xivhotbar.hide_hotbars then
+--         return
+--     end
+	
+	
+-- 	shiftDown = bit.band(bit.rshift(flags, 0), 1) == 1;
+-- 	altDown = bit.band(bit.rshift(flags, 1), 1) == 1;
+-- 	controlDown = bit.band(bit.rshift(flags, 2), 1) == 1;
+	
+-- 	if shiftDown and not altDown and not controlDown then
+-- 		change_active_hotbar(2)
+-- 	else
+-- 		change_active_hotbar(1)
+-- 	end
+
+--     if dik == theme_options.controls_battle_mode and pressed == true then
+--         toggle_environment()
+--     end
+	
+-- 	if pressed == true and not altDown and not controlDown then
+-- 		if dik == keyboard.key_1 then trigger_action(1); return false; end
+-- 		if dik == keyboard.key_2 then trigger_action(2); return false; end
+-- 		if dik == keyboard.key_3 then trigger_action(3); return false; end
+-- 		if dik == keyboard.key_4 then trigger_action(4); return false; end
+-- 		if dik == keyboard.key_5 then trigger_action(5); return false; end
+-- 		if dik == keyboard.key_6 then trigger_action(6); return false; end
+-- 		if dik == keyboard.key_7 then trigger_action(7); return false; end
+-- 		if dik == keyboard.key_8 then trigger_action(8); return false; end
+-- 		if dik == keyboard.key_9 then trigger_action(9); return false; end
+-- 		if dik == keyboard.key_0 then trigger_action(0); return false; end
+-- 	end
+-- 	--return false
+-- end)
 
 -- ON PRERENDER
 windower.register_event('prerender',function()
@@ -419,9 +470,9 @@ windower.register_event('status change', function(new_status_id)
     if xivhotbar.in_battle == false and (new_status_id == 1 or new_status_id == 3) then -- 1 = engaged, 3 = dead
         xivhotbar.in_battle = true
         set_battle_environment(true)
-    --elseif xivhotbar.in_battle and new_status_id ~= 1 and new_status_id ~= 3 then -- 1 = engaged, 3 = dead
-    --    xivhotbar.in_battle = false
-    --    set_battle_environment(false)
+    elseif xivhotbar.in_battle and new_status_id ~= 1 and new_status_id ~= 3 then -- 1 = engaged, 3 = dead
+       xivhotbar.in_battle = false
+       set_battle_environment(false)
     end
 end)
 

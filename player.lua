@@ -224,7 +224,7 @@ function player:execute_action(slot)
         windower.chat.input(command)
     end
 
-    windower.chat.input('/' .. action.type .. ' "' .. action.action .. '" <' .. action.target .. '>')
+    windower.chat.input('/' .. action.type .. ' "' .. action.action .. (action.target and ('" <' .. action.target .. '>') or ""))
 	return true
 end
 
